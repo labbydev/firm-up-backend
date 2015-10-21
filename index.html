@@ -74,10 +74,10 @@
     <section>
       <h3>Company Workflow</h3>
       <ul>
-        <li>Intake with the client to discuss their internal needs</li>
-        <li>Create a custom workflow for those clients needs</li>
-        <li>Determine number and needs of roles</li>
-        <li>Craft permissions based on client needs and custom workflow</li>
+        <li class="fragment">Intake with the client to discuss their internal needs</li>
+        <li class="fragment">Create a custom workflow for those clients needs</li>
+        <li class="fragment">Determine number and needs of roles</li>
+        <li class="fragment">Craft permissions based on client needs and custom workflow</li>
       </ul>
       <aside class="notes">I have to talk to the client and figure out how they work. Custom workflow and options on CFA</aside>
     </section>
@@ -85,9 +85,9 @@
       <section>
         <h3>Permissions</h3>
         <ul>
-          <li>Content administrators can focus on only the tasks that they need to complete.</li>
-          <li>Prevent content maintainers from unintentionally breaking the website.</li>
-          <li>Prevent unauthorized users from seeing parts of the site that they shouldn't.</li>
+          <li class="fragment">Content administrators can focus on only the tasks that they need to complete.</li>
+          <li class="fragment">Prevent content maintainers from unintentionally breaking the website.</li>
+          <li class="fragment">Prevent unauthorized users from seeing parts of the site that they shouldn't.</li>
         </ul>
         <aside class="notes">Make the system less breakable and help them focus on what they need to get done.</aside>
       </section>
@@ -95,13 +95,293 @@
         <h4>Permissions by Role</h4>
         <p>Tools to work out your permissions</p>
         <ul>
-          <li>Taxonomies: <a href="https://www.drupal.org/project/vppr">Vocabulary Permissions per Role</a></li>
-          <li>Menus: <a href="https://www.drupal.org/project/menu_admin_per_menu">Menu Admin per Admin</a></li>
-          <li>Fields: <a href="https://www.drupal.org/project/field_permissions">Field Permissions</a></li>
-          <li>Content Types: <a href="https://www.drupal.org/project/content_access">Content Access</a></li>
+          <li class="fragment">Taxonomies: <a href="https://www.drupal.org/project/vppr">Vocabulary Permissions per Role</a></li>
+          <li class="fragment">Menus: <a href="https://www.drupal.org/project/menu_admin_per_menu">Menu Admin per Admin</a></li>
+          <li class="fragment">Fields: <a href="https://www.drupal.org/project/field_permissions">Field Permissions</a></li>
+          <li class="fragment">Content Types: <a href="https://www.drupal.org/project/content_access">Content Access</a></li>
         </ul>
-        <p>An easy exercise for role testing is to use <a href="https://www.drupal.org/project/masquerade">Masquarade</a>.</p>
+        <p class="fragment">An easy exercise for role testing is to use <a href="https://www.drupal.org/project/masquerade">Masquarade</a>.</p>
         <aside class="notes">Menu admin per admin - you may only want to let them edit certain parts of the menu or not edit the menu at all. Content access - set general rules for all the different content types, and you can override for particular nodes. Masquarade - allows to test permissions, but disable on live websites. FTC testing - Masquerade.</aside>
+      </section>
+      <section>
+        <h4>Permissions Before</h4>
+        <img src="images/permissions-before.png" alt="Screenshot of Drupal 7 Admin menu showing all possible links." />
+        <p>Too many options to distract Content administrators</p>
+      </section>
+      <section>
+        <h4>Permissions After</h4>
+        <img src="images/permissions-after.png" alt="Screenshot of Drupal 7 Admin menu showing only links that content administrators need." />
+        <p>Content administrators can focus on their tasks</p>
+      </section>
+    </section>
+    <section>
+      <section>
+        <h3>Admin Views with VBO</h3>
+        <div class="fragment">
+          <h4><a href="https://www.drupal.org/project/admin_views">Administration Views</a></h4>
+          <ul>
+            <li>Customizable view</li>
+            <li>Overrides the content, user and taxonomy system pages</li>
+          </ul>
+        </div>
+        <div class="fragment">
+          <h4><a href="https://www.drupal.org/project/views_bulk_operations">Views Bulk Operations (VBO)</a></h4>
+          <ul>
+            <li>Adds functionality to these views</li>
+            <li>Is useful when dealing with a lot of content</li>
+          </ul>
+        </div>
+        <aside class="notes">Replace default pages with custom views. Easily manipulate the options to the client needs.</aside>
+      </section>
+      <section>
+        <img src="images/content-before.png" alt="Screenshot of Drupal 7 content page filters." />
+        <div class="fragment">
+          <img src="images/content-after.png" alt="Screenshot of Drupal 7 content page use admin views and vbo to give more faceted search." />
+          <p>It is also easy to create your own custom views to be more tailored to the clients needs.</p>
+        </div>
+      </section>
+    </section>
+    <section>
+      <section>
+        <h3>Node/Entity Ordering</h3>
+        <div class="fragment">
+          <h4><a href="https://www.drupal.org/project/nodequeue">Nodequeue</a></h4>
+          <p>Adds easy drag-and-drop interface</p>
+        </div>
+        <div class="fragment">
+          <h4><a href="https://www.drupal.org/project/weight">Weight</a></h4>
+          <ul>
+            <li>Relatively lightweight module</li>
+            <li>Works like the weights already built into menu items</li>
+          </ul>
+        </div>
+        <small class="fragment"><a href="https://www.drupal.org/node/398508">more information on node ordering</a></small>
+        <aside class="notes">Clients want custom ordering. Editing the post date can be hard and counter intuitive</aside>
+      </section>
+      <section>
+        <h4>Nodequeue</h4>
+        <ul class="fragment">
+          <li>Supports translated nodes</li>
+          <li>Allows seperate permissions for editing and ordering</li>
+        </ul>
+        <img class="fragment" src="images/nodequeue.png" alt="Screenshot of a Drupal 7 nodequeue" />
+        <aside class="notes">Lists all the content. Drag and drop interface. Add content to the queue through the node page, or through the auto fill input here</aside>
+      </section>
+      <section>
+        <h4>Weight</h4>
+        <ul class="fragment">
+          <li>lightweight (only two additional database tables)</li>
+          <li>Uses core node edit page</li>
+        </ul>
+        <img class="fragment" src="images/weight.png" alt="Screenshot of a Drupal 7 node weight" />
+        <aside class="notes">works the same as weight on other fields, like menus and taxonomies</aside>
+      </section>
+    </section>
+    <section>
+      <section>
+        <h3>Content Interface</h3>
+        <h4>Exercise 1: Organize the Edit Page</h4>
+        <p class="fragment"><a href="https://www.drupal.org/project/ds">Display Suite</a> + <a href="https://www.drupal.org/project/field_group">Field Group</a></p>
+        <ul class="fragment">
+          <li>Clean up the node edit page</li>
+          <li>Divid fields into manageable chunks</li>
+        </ul>
+        <aside class="notes">default content interface is rather unwieldy</aside>
+      </section>
+      <section>
+        <img src="images/default-edit.png" alt="Screenshot of Drupal 7 node edit page" />
+        <p>Default node edit page</p>
+        <aside class="notes">default content interface is rather unwieldy</aside>
+      </section>
+      <section>
+        <img src="images/field_group-edit.png" alt="Screenshot of Drupal 7 node edit page after being organized with field group" />
+        <p>Node edit page after being field grouped</p>
+        <aside class="notes">tabs make it easy to think about</aside>
+      </section>
+      <section>
+        <h5><a href="https://www.drupal.org/project/conditional_fields">Conditional Fields</a></h5>
+        <p>Show and hides fields based on the values of other fields</p>
+        <ul class="fragment">
+          <li>Keeps edit page from becoming cumbersome</li>
+          <li>Great if you only need certain content in some instances</li>
+          <li>Helps keep the whole website unbreakable</li>
+        </ul>
+      </section>
+      <section>
+        <img src="images/conditional_fields-before.png" alt="Screenshot of Drupal 7 node edit page hiding fields with conditional fields" />
+        <p>When content isn't featured, no "Featured Image" upload appears</p>
+      </section>
+      <section>
+        <img src="images/conditional_fields-after.png" alt="Screenshot of Drupal 7 node edit page showing fields based on the status of another field" />
+        <p>When content is featured, "Featured Image" upload appears</p>
+      </section>
+      <section>
+        <h4>Exercise 2: Taming Images</h4>
+        <ul class="fragment">
+          <li><a href="https://www.drupal.org/project/insert">Insert</a> images into the WYSIWYG.</li>
+          <li>Create specific style options</li>
+          <li>Add additional CSS styles if required</li>
+          <li>Use alt and title text to encourage administrators to keep their content accessible.</li>
+        </ul>
+      </section>
+      <section>
+        <img src="images/images-wysiwyg.png" alt="Screenshot of Drupal 7 node page using Insert to add images to a WYSIWYG" />
+      </section>
+      <section>
+        <h5><a href="https://www.drupal.org/project/manualcrop">Manual Crop</a></h5>
+        <ul class="fragment">
+          <li>Administrators can crop images in the Drupal after uploading</li>
+          <li>Maintains aspect ratio</li>
+          <li>Links into image styles</li>
+        </ul>
+        <aside class="notes">Images scale correctly. Constrain the proportions to match the images style</aside>
+      </section>
+      <section>
+        <img src="images/manual-crop.png" alt="Screenshot of Drupal 7 manual crop interface" />
+        <p>Manual crop</p>
+      </section>
+      <section>
+        <h4>Exercise 3: Trim down the options</h4>
+        <div class="fragment">
+          <h5><a href="https://www.drupal.org/project/field_permissions">Field Permissions</a></h5>
+          <p>Hides fields not being used by the client (such as fields used during migration or development</p>
+        </div>
+        <div class="fragment">
+          <h5><a href="https://www.drupal.org/project/override_node_options">Override Node Options</a></h5>
+          <p>Hides default options like "Promote to front page"</p>
+        </div>
+      </section>
+      <section>
+        <h4>Exercise 4: User friendly select lists</h4>
+        <div class="fragment">
+          <h5><a href="https://www.drupal.org/project/chosen">Chosen</a></h5>
+          <ul>
+            <li>Turn select lists into auto complete tagging fields</li>
+            <li>Particularly useful on selects with over LOTS of options</li>
+          </ul>
+        </div>
+        <aside class="notes">uses chosen.js plugin</aside>
+      </section>
+      <section>
+        <img src="images/chosen.png" alt="Screenshot of Drupal 7 chosen interface" />
+        <p>Chosen</p>
+      </section>
+      <section>
+        <h4>Exercise 5: Character Counts</h4>
+        <div class="fragment">
+          <h5><a href="https://www.drupal.org/project/maxlength">Maxlength</a></h5>
+          <ul>
+            <li>Limits the ability to be too wordy</li>
+            <li>Avoids text breaking the design</li>
+            <li>Helpful countdown for administrative users</li>
+          </ul>
+        </div>
+        <aside class="notes">highlights in yellow or red, and shows when you start going over
+          works in javascript, and hooks into field API</aside>
+      </section>
+      <section>
+        <img src="images/maxlength.png" alt="Screenshot of Drupal 7 maxlength on WYSIWYG interface" />
+        <p>Maxlength</p>
+      </section>
+      <section>
+        <h4>Exercise 6: Updating and Reverting Content</h4>
+        <h5>Workbench Moderation</h5>
+        <p>Helps clients revert content to former versions</p>
+      </section>
+      <section>
+        <img src="images/workbench-moderation-screenshot.png" alt="Screenshot of Workbench Moderation" />
+        <p>Workbench Moderation</p>
+      </section>
+      <section>
+        <h5>Diff</h5>
+        <p>Illustrates what changes were made to the content.</p>
+      </section>
+      <section>
+        <img src="images/diff.png" alt="Screenshot of diff module" />
+        <p>Diff</p>
+      </section>
+    </section>
+    <section>
+      <section>
+        <h4>Configuring the WYSIWYG</h4>
+        <img class="fragment" src="images/wysiwyg-default.png" alt="Screenshot of the default WYSIWYG buttons" /><br />
+        <ul class="fragment">
+          <li>Get rid of unused buttons</li>
+          <li>Use the CKEditor module</li>
+        </ul>
+        <aside class="notes">You HAVE to limit the options of the WYISWYG in order to make it easier for the client. Not to mention that it becomes much less cumbersome and intimidating.</aside>
+      </section>
+      <section>
+        <img src="images/wysiwyg-configured.png" alt="Screenshot of WYSIWYG after you limit the buttons to only what content admins need" />
+        <p>The only options left here are bold, italicize, format, lists, links and images.</p>
+      </section>
+    </section>
+    <section>
+      <h4>Linkit</h4>
+      <ul class="fragment">
+        <li>Helps content editors link to internal content</li>
+        <li>Allows users to easily search for content on the system or link to a URL</li>
+      </ul>
+      <img class="fragment" src="images/linkit.png" alt="Screenshots of the WYSIWYG button for linkit and the interface to link items" />
+    </section>
+    <section>
+      <section>
+        <h3>Pushing it to the next level</h3>
+        <h4 class="fragment">Custom Dashboard</h4>
+        <div class="fragment">
+          <h5><a href="https://www.drupal.org/project/login_destination">Login Destination</a></h5>
+          <p>Redirects users on login</p>
+        </div>
+        <div class="fragment">
+          <h5><a href="https://www.drupal.org/project/workbench">Workbench</a></h5>
+          <p>The Workbench suite is modular, allowing site builders to build the workflow that best suits the content administrators on their site.</p>
+        </div>
+      </section>
+      <section>
+        <img src="images/workbench-moderation-screenshot.png" alt="Screenshot of Workbench dashboard" />
+        <p>The only options left here are bold, italicize, format, lists, links and images.</p>
+      </section>
+    </section>
+    <section>
+      <section>
+        <h3>Cool Down</h3>
+        <div class="fragment">
+          <h4>Admin Themes</h4>
+          <ul>
+            <li>Admin themes add a final polish to the administrative interface</li>
+            <li><a href="https://www.drupal.org/project/shiny">Shiny</a></li>
+            <li><a href="https://www.drupal.org/project/adminimal">Adminimal</a> (with <a href="adminimal_admin_menu">Adminimal Admin Menu</a>)</li>
+            <li><a href="https://www.drupal.org/project/ember">Ember</a></li>
+          </ul>
+        </div>
+      </section>
+      <section>
+        <h5>Shiny</h5>
+        <img src="images/shiny.png" alt="Screenshot of D7 content page using Shiny theme" />
+        <p>Shiny is very consistent with Seven, but with a larger font and more polished look and feel.</p>
+      </section>
+      <section>
+        <h5>Adminimal</h5>
+        <img src="images/adminimal.png" alt="Screenshot of D7 content page using Adminimal theme" />
+        <p>Adminimal uses flat UI, color coding, and responsive breakpoints. But, fieldsets are not the best.</p>
+      </section>
+      <section>
+        <h5>Ember</h5>
+        <img src="images/ember.png" alt="Screenshot of D7 content page using Ember theme" />
+        <p>Adminimal uses flat UI, navbar, and responsive breakpoints.</p>
+      </section>
+    </section>
+    <section>
+      <section>
+        <h3>Conclusion</h3>
+        <ul>
+          <li class="fragment">There are a lot of easy-to-add modules on d.o that can help content administrators streamline their workflow</li>
+          <li class="fragment">Consult a developer for recommendations about what is the best fit for your website and workflow</li>
+        </ul>
+      </section>
+      <section>
+        <h1>Questions?</h1>
+        <small>Lauren Byrwa | <a href="http://twitter.com/labbydev">@labbydev</a></small>
       </section>
     </section>
   </div>

@@ -1,146 +1,146 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Firm Up that Backend: Easy Exercises for a Usable Admin Interface</title>
-    <meta name="description" content="For content maintainers, an uncustomized Drupal admin interface can be complicated, overwhelming, and downright scary. By making the system easier to use and more difficult to break, developers and site-builders can create better relationships with their content maintainers and ultimately their clients. There are a number of steps they can take to do this, ranging from installing and configuring modules that improve the interface, to customizing the permissions system to restrict access to areas of the site that can be unnecessarily confusing, to setting up more intuitive dashboards. Careful thought about what content maintainers need to do, and planning to help them to do it, helps them focus on their content and empowers them to take control of managing and maintaining their website with less developer assistance.">
-    <meta name="author" content="Lauren Byrwa">
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-    <link rel="stylesheet" href="css/reveal.css">
-    <link rel="stylesheet" href="palantirnet-theme/css/styles.css" id="theme">
-    <!-- Printing and PDF exports -->
-    <script>
-      var link = document.createElement( 'link' );
-      link.rel = 'stylesheet';
-      link.type = 'text/css';
-      link.href = window.location.search.match( /print-pdf/gi ) ? 'palantirnet-theme/css/print/pdf.css' : 'palantirnet-theme/css/print/paper.css';
-      document.getElementsByTagName( 'head' )[0].appendChild( link );
-    </script>
-    <!--[if lt IE 9]>
-    <script src="lib/js/html5shiv.js"></script>
-    <![endif]-->
-  </head>
-  <body class="dark">
-    <div class="reveal">
-      <div class="slides">
-        <section>
-          <h1>Firm up that Backend</h1>
-          <h2>Easy Exercises for a Usable Admin Interface</h2>
-          <p>Lauren Byrwa | <a href="http://twitter.com/labbydev">@labbydev</a></p>
-          <p><small>Senior Front End Developer <a href="http://twitter.com/palantir">@Palantir.net</a></small></p>
-          <aside class="notes">Who are you? why are you talking? Why should people care?</aside>
-        </section>
-        <section>
-          <h3>What do you do with Drupal?</h3>
-          <ul>
-            <li>Front-end?</li>
-            <li>Site Building?</li>
-            <li>Module Development?</li>
-            <li>Content Administrators?</li>
-            <li>Have you ever entered content into Drupal?</li>
-          </ul>
-        </section>
-        <section>
-          <h3>Why does it matter?</h3>
-          <ul>
-            <li>Developers don't know what it's like to not be developers.</li>
-            <li>Content administrators don't always know Drupal.</li>
-            <li>The backend gets left behind.</li>
-            <li>Content administrators don't have the confidence to do their job without assistance.</li>
-          </ul>
-        </section>
-        <section>
-          <section>
-            <h3>Warm ups</h3>
-            <ul>
-              <li class="fragment">Use the <a href="https://www.drupal.org/project/admin_menu">Administration Menu</a> (instead of the default Toolbar).</li>
-              <li class="fragment">Add help text</li>
-              <li class="fragment">Does your structure and naming make sense to people who don't know Drupal?</li>
-            </ul>
-            <aside class="notes">The best way to get started with anything is a good warm up. These are the things that I do on almost all of my projects.</aside>
-          </section>
-          <section>
-            <img src="images/admin_menu.png" alt="Screenshot of Admin menu dropdown in action." />
-            <p>Dropdowns allow users to easily and quickly get through the system</p>
-            <aside class="notes">It can take about 4-5 clicks/page loads just to add content. You can easily get around with a dropdown. You can integrate with permissions, so that clients can't get to pages they don't need to use.</aside>
-          </section>
-          <section>
-            <img src="images/help-text.png" alt="Screenshot of Drupal help text." />
-            <p>Adding help text on fields, and descriptions on content types, taxonomies and contexts</p>
-          </section>
-        </section>
-        <section>
-          <h3>Company Workflow</h3>
-          <ul>
-            <li>Intake with the client to discuss their internal needs</li>
-            <li>Create a custom workflow for those clients needs</li>
-            <li>Determine number and needs of roles</li>
-            <li>Craft permissions based on client needs and custom workflow</li>
-          </ul>
-          <aside class="notes">I have to talk to the client and figure out how they work. Custom workflow and options on CFA</aside>
-        </section>
-        <section>
-          <section>
-            <h3>Permissions</h3>
-            <ul>
-              <li>Content administrators can focus on only the tasks that they need to complete.</li>
-              <li>Prevent content maintainers from unintentionally breaking the website.</li>
-              <li>Prevent unauthorized users from seeing parts of the site that they shouldn't.</li>
-            </ul>
-            <aside class="notes">Make the system less breakable and help them focus on what they need to get done.</aside>
-          </section>
-          <section>
-            <h4>Permissions by Role</h4>
-            <p>Tools to work out your permissions</p>
-            <ul>
-              <li>Taxonomies: <a href="https://www.drupal.org/project/vppr">Vocabulary Permissions per Role</a></li>
-              <li>Menus: <a href="https://www.drupal.org/project/menu_admin_per_menu">Menu Admin per Admin</a></li>
-              <li>Fields: <a href="https://www.drupal.org/project/field_permissions">Field Permissions</a></li>
-              <li>Content Types: <a href="https://www.drupal.org/project/content_access">Content Access</a></li>
-            </ul>
-            <p>An easy exercise for role testing is to use <a href="https://www.drupal.org/project/masquerade">Masquarade</a>.</p>
-            <aside class="notes">Menu admin per admin - you may only want to let them edit certain parts of the menu or not edit the menu at all. Content access - set general rules for all the different content types, and you can override for particular nodes. Masquarade - allows to test permissions, but disable on live websites. FTC testing - Masquerade.</aside>
-          </section>
-        </section>
+<head>
+  <meta charset="utf-8">
+  <title>Firm Up that Backend: Easy Exercises for a Usable Admin Interface</title>
+  <meta name="description" content="For content maintainers, an uncustomized Drupal admin interface can be complicated, overwhelming, and downright scary. By making the system easier to use and more difficult to break, developers and site-builders can create better relationships with their content maintainers and ultimately their clients. There are a number of steps they can take to do this, ranging from installing and configuring modules that improve the interface, to customizing the permissions system to restrict access to areas of the site that can be unnecessarily confusing, to setting up more intuitive dashboards. Careful thought about what content maintainers need to do, and planning to help them to do it, helps them focus on their content and empowers them to take control of managing and maintaining their website with less developer assistance.">
+  <meta name="author" content="Lauren Byrwa">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="palantirnet-theme/css/styles.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'palantirnet-theme/css/print/pdf.css' : 'palantirnet-theme/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body class="dark">
+<div class="reveal">
+  <div class="slides">
+    <section>
+      <h1>Firm up that Backend</h1>
+      <h2>Easy Exercises for a Usable Admin Interface</h2>
+      <p>Lauren Byrwa | <a href="http://twitter.com/labbydev">@labbydev</a></p>
+      <p><small>Senior Front End Developer <a href="http://twitter.com/palantir">@Palantir.net</a></small></p>
+      <aside class="notes">Who are you? why are you talking? Why should people care?</aside>
+    </section>
+    <section>
+      <h3>What do you do with Drupal?</h3>
+      <ul>
+        <li class="fragment">Front-end?</li>
+        <li class="fragment">Site Building?</li>
+        <li class="fragment">Module Development?</li>
+        <li class="fragment">Content Administrators?</li>
+        <li class="fragment">Have you ever entered content into Drupal?</li>
+      </ul>
+    </section>
+    <section>
+      <h3>Why does it matter?</h3>
+      <ul>
+        <li class="fragment">Developers don't know what it's like to not be developers.</li>
+        <li class="fragment">Content administrators don't always know Drupal.</li>
+        <li class="fragment">The backend gets left behind.</li>
+        <li class="fragment">Content administrators don't have the confidence to do their job without assistance.</li>
+      </ul>
+    </section>
+    <section>
+      <section>
+        <h3>Warm ups</h3>
+        <ul>
+          <li class="fragment">Use the <a href="https://www.drupal.org/project/admin_menu">Administration Menu</a> (instead of the default Toolbar).</li>
+          <li class="fragment">Add help text</li>
+          <li class="fragment">Does your structure and naming make sense to people who don't know Drupal?</li>
+        </ul>
+        <aside class="notes">The best way to get started with anything is a good warm up. These are the things that I do on almost all of my projects.</aside>
+      </section>
+      <section>
+        <img src="images/admin_menu.png" alt="Screenshot of Admin menu dropdown in action." />
+        <p>Dropdowns allow users to easily and quickly get through the system</p>
+        <aside class="notes">It can take about 4-5 clicks/page loads just to add content. You can easily get around with a dropdown. You can integrate with permissions, so that clients can't get to pages they don't need to use.</aside>
+      </section>
+      <section>
+        <img src="images/help-text.png" alt="Screenshot of Drupal help text." />
+        <p>Adding help text on fields, and descriptions on content types, taxonomies and contexts</p>
+      </section>
+    </section>
+    <section>
+      <h3>Company Workflow</h3>
+      <ul>
+        <li>Intake with the client to discuss their internal needs</li>
+        <li>Create a custom workflow for those clients needs</li>
+        <li>Determine number and needs of roles</li>
+        <li>Craft permissions based on client needs and custom workflow</li>
+      </ul>
+      <aside class="notes">I have to talk to the client and figure out how they work. Custom workflow and options on CFA</aside>
+    </section>
+    <section>
+      <section>
+        <h3>Permissions</h3>
+        <ul>
+          <li>Content administrators can focus on only the tasks that they need to complete.</li>
+          <li>Prevent content maintainers from unintentionally breaking the website.</li>
+          <li>Prevent unauthorized users from seeing parts of the site that they shouldn't.</li>
+        </ul>
+        <aside class="notes">Make the system less breakable and help them focus on what they need to get done.</aside>
+      </section>
+      <section>
+        <h4>Permissions by Role</h4>
+        <p>Tools to work out your permissions</p>
+        <ul>
+          <li>Taxonomies: <a href="https://www.drupal.org/project/vppr">Vocabulary Permissions per Role</a></li>
+          <li>Menus: <a href="https://www.drupal.org/project/menu_admin_per_menu">Menu Admin per Admin</a></li>
+          <li>Fields: <a href="https://www.drupal.org/project/field_permissions">Field Permissions</a></li>
+          <li>Content Types: <a href="https://www.drupal.org/project/content_access">Content Access</a></li>
+        </ul>
+        <p>An easy exercise for role testing is to use <a href="https://www.drupal.org/project/masquerade">Masquarade</a>.</p>
+        <aside class="notes">Menu admin per admin - you may only want to let them edit certain parts of the menu or not edit the menu at all. Content access - set general rules for all the different content types, and you can override for particular nodes. Masquarade - allows to test permissions, but disable on live websites. FTC testing - Masquerade.</aside>
+      </section>
+    </section>
+  </div>
+  <footer class="footer">
+    <a class="logo-wrapper" href="https://www.palantir.net/" title="Link to Palantir.net's website">
+      <div class="logo">
+        <p>Palantir.net</p>
       </div>
-      <footer class="footer">
-        <a class="logo-wrapper" href="https://www.palantir.net/" title="Link to Palantir.net's website">
-          <div class="logo">
-            <p>Palantir.net</p>
-          </div>
-        </a>
-      </footer>
-    </div>
+    </a>
+  </footer>
+</div>
 
-    <script src="lib/js/head.min.js"></script>
-    <script src="js/reveal.js"></script>
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
 
-    <script>
+<script>
 
-      // Full list of configuration options available at:
-      // https://github.com/hakimel/reveal.js#configuration
-      Reveal.initialize({
-        controls: true,
-        progress: true,
-        history: true,
-        center: true,
+  // Full list of configuration options available at:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
 
-        transition: 'slide', // none/fade/slide/convex/concave/zoom
+    transition: 'slide', // none/fade/slide/convex/concave/zoom
 
-        // Optional reveal.js plugins
-        dependencies: [
-          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-          { src: 'plugin/zoom-js/zoom.js', async: true },
-          { src: 'plugin/notes/notes.js', async: true }
-        ]
-      });
+    // Optional reveal.js plugins
+    dependencies: [
+      { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+      { src: 'plugin/zoom-js/zoom.js', async: true },
+      { src: 'plugin/notes/notes.js', async: true }
+    ]
+  });
 
-    </script>
+</script>
 
-  </body>
+</body>
 </html>
